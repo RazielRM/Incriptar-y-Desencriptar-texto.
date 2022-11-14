@@ -1,18 +1,75 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+namespace Desencriptar
+{
+    static class arrayExtensios
+    {
+        public static int indexOf<t>(this t[] array, t value)
+        {
+            return Array.IndexOf(array, value);
+        }
+    }
 
-# Other files and folders
-.settings/
+    internal class Program
+    {
+        public static int[] convertirnumero(string oracion)
+        {
+            char[] charoracion = oracion.ToCharArray();
+            int[] numeros = new int[charoracion.Length];
+            for (int i = 0; i < charoracion.Length; i++)
+            {
+                numeros[i] = numeror(charoracion[i]);
+            }
+            return numeros;
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+        }
+        public static int numeror(char letter)
+        {
+            char[] letras = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.' };
+            int index = letras.indexOf(letter);
+            return index;
+        }
+        static void Main(string[] args)
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+        {
+            byte opcion;
+            Console.WriteLine("Escoge una de las dos opciones que desea realizar:");
+            Console.WriteLine("\n");
+            Console.WriteLine("1.-Incriptar una oracion.");
+            
+            Console.WriteLine("2.-Desecriptar una oracion.");
+            Console.WriteLine("\n");
+            opcion = Convert.ToByte(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    int[,] clave = { { 1, 2, 3 }, { 0, -1, 3 }, { 2, 1, 0 } };
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Ingresa una oracion:");
+                    string oracion = Console.ReadLine();
+
+                    int[] numerous = convertirnumero(oracion);
+                    for (int i = 0; i < numerous.Length; i++)
+                    {
+                        Console.Write(numerous[i] + " ");
+                        
+                    }
+                    
+
+                    break;
+
+                    
+                case 2:
+                    
+
+
+
+
+
+                    break;
+        }
+            
+            
+            
+        }
+    }
+}
