@@ -26,3 +26,31 @@
         }
     }
 }
+                {
+                    cantidad = Convert.ToInt32(Console.ReadLine());
+                    int[] numer = new int[cantidad];
+                    for (int i = 0; i < numer.Length; i++)
+                    {
+                        Console.WriteLine("Ingrese el numero " + (i + 1));
+                        numer[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    int[] a = new int[] { 1, 3, 5, 7, 9 };
+                    int posicion = 0;
+                    for (int i = 0; i < numer.Length; i++)
+                    {
+                        posicion = numer[i] / a[i % 5];
+                        Console.WriteLine(Convert.ToChar(posicion + 64));
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Disculpe pero lo que ingreso no es valido en el programa..");
+                }
+            }
+
+            Console.ReadKey();
+
+           
+        }
+    }
+}
