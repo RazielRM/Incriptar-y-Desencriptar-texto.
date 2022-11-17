@@ -54,3 +54,286 @@
         }
     }
 }
+utilizando System.Threading.Tasks;
+
+Encriptar espacio de nombres
+
+{
+
+    programa de clase
+
+    {
+
+        vacío estático principal (cadena [] argumentos)
+
+        {
+
+            menú int = 0;
+
+            mientras (menú! = 3)
+
+            {
+
+                Console.BackgroundColor = ConsoleColor.Black;
+
+                Consola.Borrar();
+
+                Console.ForegroundColor = ConsoleColor.Verde;
+
+                Console.WriteLine("...BIENVENIDOS...");
+
+                Consola.WriteLine("\n");
+
+                Console.ForegroundColor = ConsoleColor.Amarillo;
+
+                Console.WriteLine("Este propgrama fue realizado para la encriptacion de frases u oraciones mientras que asi mismo desincrepte los mismos.");
+
+                Consola.WriteLine("\n");
+
+                Console.WriteLine("1.Encriptar texto");
+
+                Consola.WriteLine("\n");
+
+                Console.WriteLine("2.Desencriptar texto");
+
+                Console.ForegroundColor = ConsoleColor.Verde;
+
+                Consola.WriteLine("\n");
+
+                Console.WriteLine("3.Deseo salir del programa");
+
+                Consola.WriteLine("\n");
+
+                probar
+
+                {
+
+                    menú = Convert.ToInt32(Console.ReadLine());
+
+                    cambiar (menú)
+
+                    {
+
+                        caso 1:
+
+                            Encriptar();
+
+                            
+
+                            descanso;
+
+                        caso 2:
+
+                            Desencriptar();
+
+                           
+
+                            descanso;
+
+                        caso 3:
+
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+                            Console.WriteLine("GRACIAS,ME QUEME LA CABEZA POR REALIZAR ESTE PROGRAMA ESPERO Y SAQUE 5 PUNTOS..");
+
+                            Consola.WriteLine("\n");
+
+                            Console.WriteLine("â•”â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â•—");
+
+                            Console.WriteLine("â•' â•'");
+
+                            Console.WriteLine("â•' EL CONEJO DE LA SUERTE â•'");
+
+                            Console.WriteLine("â•' â•'");
+
+                            Console.WriteLine("â•šâ• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â • â• â• â• â• â• â• â• â• â• â• â• â• ");
+
+                            Consola.WriteLine();
+
+                            Console.ForegroundColor = ConsoleColor.Amarillo;
+
+                            Consola.WriteLine(" ** **");
+
+                            Consola.WriteLine(" ** **");
+
+                            Consola.WriteLine(" ** ** ****");
+
+                            Consola.WriteLine(" ** ** ** ****");
+
+                            Consola.WriteLine(" ** ** * ** **");
+
+                            Consola.WriteLine(" ** * * ** *** **");
+
+                            Consola.WriteLine(" ** * * ** ** *");
+
+                            Consola.WriteLine(" ** ** ** ** **");
+
+                            Consola.WriteLine(" ** ** **");
+
+                            Consola.WriteLine(" * * ");
+
+                            Consola.WriteLine(" * *");
+
+                            Consola.WriteLine(" * 0 0 *");
+
+                            Consola.WriteLine(" * @ *");
+
+                            Consola.WriteLine(" * *");
+
+                            Consola.WriteLine(" * v *");
+
+                            Consola.WriteLine(" ** **");
+
+                            descanso;
+
+                        defecto:
+
+                            
+
+                            Console.WriteLine("Disculpe pero lo que ingreso no es valido en el programa..");
+
+                            descanso;
+
+                    }
+
+                }
+
+                captura (Excepción)
+
+                {
+
+                    
+
+                    Console.WriteLine("Disculpe pero lo que ingreso no es valido en el programa..");
+
+                }
+
+            }
+
+            vacío estático asíncrono Encriptar()
+
+            {
+
+                char[] abecedario = new char[26];
+
+                charletero;
+
+                posición int = 0;
+
+                for (int i = 0; i < abecedario.Length; i++)
+
+                {
+
+                    letra = Convert.ToChar(i + 65);
+
+                    abecedario[i] = letra;
+
+                }
+
+                Console.ForegroundColor = ConsoleColor.Magenta;
+
+                Console.WriteLine("De favor ingresa el texto que desea encriptar:");
+
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+
+                Consola.WriteLine("\n");
+
+                cadena tex = Console.ReadLine();
+
+                tex = tex.ToUpper();
+
+                for (int i = 0; i < tex.Length; i++)
+
+                {
+
+                    for (int j = 0; j < abecedario.Length; j++)
+
+                    {
+
+                        if (abecedario[i] == abecedario[j])
+
+                        {
+
+                            posición = j + 1;
+
+                            descanso;
+
+                        }
+
+                    }
+
+                    int[] a = new int[] { 1, 3, 5, 7, 9 };
+
+                    int resultado = posicion * a[i % 5];
+
+                    int[] b = nuevo int[5];
+
+                    b[i % 5] = resultado;
+
+                    Console.WriteLine(b[i % 5] + " ");
+
+                }
+
+            }
+
+            vacío estático asíncrono Desencriptar()
+
+            {
+
+                Console.WriteLine("Ingrese la cantidad de numeros para desencriptar");
+
+                intcantidad = 0;
+
+                probar
+
+                {
+
+                    cantidad = Convert.ToInt32(Console.ReadLine());
+
+                    int[] numero = new int[cantidad];
+
+                    for (int i = 0; i < numer.Length; i++)
+
+                    {
+
+                        Console.WriteLine("Ingrese el numero " + (i + 1));
+
+                        numer[i] = Convert.ToInt32(Console.ReadLine());
+
+                    }
+
+                    int[] a = new int[] { 1, 3, 5, 7, 9 };
+
+                    posición int = 0;
+
+                    for (int i = 0; i < numer.Length; i++)
+
+                    {
+
+                        posicion = numero[i] / a[i % 5];
+
+                        Console.WriteLine(Convert.ToChar(posición + 64));
+
+                    }
+
+                }
+
+                captura (Excepción)
+
+                {
+
+                    Console.WriteLine("Disculpe pero lo que ingreso no es valido en el programa..");
+
+                }
+
+            }
+
+            Consola.ReadKey();
+
+           
+
+        }
+
+    }
+
+}
